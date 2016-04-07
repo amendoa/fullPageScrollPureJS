@@ -1,0 +1,40 @@
+body, html {
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll-wrapper section{
+    width: 100%;
+    height: 100%;
+}
+
+.section1 {
+	background-color: #3D97A0;
+}
+
+.section2 {
+	background-color: #BA5EBB; 
+}
+
+.section3 {
+	background-color:  #736ABB;
+}
+
+.section4 {
+	background-color:  #C5C384;
+}
+
+.section5 {
+	background-color:  #C59684;
+}
