@@ -1,7 +1,7 @@
 /**
  * Full page
  */
-(function(){
+(function () {
 	'use strict';
 	/**
 	 * Full scroll main function
@@ -65,12 +65,13 @@
 	 * @return {Object} this (fullScroll)
 	 */
 	fullScroll.prototype.buildDots = function () {
+		
+		this.ul = document.createElement('ul');
+		this.ul.classList.add('dots');
 		var _self = this;
 		var sections = this.defaults.sections;
-		var ul = document.createElement('ul');
-		ul.classList.add('dots');
 
-		var dotsClick = function() {
+		var dotsClick = function () {
 			var dataIndex = this.getAttribute('data-index');
  			_self.moveScroll(2, null, dataIndex);
 		};
@@ -85,10 +86,12 @@
 			a.setAttribute('data-index', i);
 			
 			li.appendChild(a);
-			ul.appendChild(li);
+			_self.ul.appendChild(li);
 		}
 
-		document.body.appendChild(ul);
+		_self.ul.childNodes[0].firstChild.classList.add('active');
+
+		document.body.appendChild(_self.ul);
 
 		return this;
 	};
@@ -165,19 +168,15 @@
 		} else if (type == 2) {
 			_self.currentPosition = dataIndex;
 		}
-	};
-	/*fullScroll.prototype.getSectionPosition = function (dataIndex) {
-		var sections = this.defaults.sections;
-		var offsetTop;
-		for (var i = 0; i < sections.length; i++) {
-			if (sections[i].getAttribute("data-index") == dataIndex) {
-				offsetTop = sections[i].offsetTop;
-			}
-		}
 
-		return offsetTop;
-	};*/
-	
+		for (var i = 0; i < _self.ul.childNodes.length; i++) {
+			_self.ul.childNodes[i].firstChild.classList.remove('active');
+			if (i == _self.currentPosition) {
+				_self.ul.childNodes[i].firstChild.classList.add('active');	
+			}
+ 		} 			
+	};
+
 	window.fullScroll = fullScroll;
 
 })();
