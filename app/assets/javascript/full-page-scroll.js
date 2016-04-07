@@ -110,6 +110,7 @@
 
 		function keyup (event) {
 			var direction = event.keyCode == 40 ? 1 : event.keyCode == 38 ? 0 : null;
+			_self.moveScroll(1, direction, null);
 		}
 		
 		if (document.addEventListener) {
