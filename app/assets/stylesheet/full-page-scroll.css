@@ -1,40 +1,59 @@
 body, html {
 	margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
-.scroll-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0;
-    padding: 0;
+.scroll-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
-.scroll-wrapper section {
-    width: 100%;
-    height: 100%;
+.scroll-container section {
+	width: 100%;
+	height: 100%;
 }
 
-.section1 {
-	background-color: #3D97A0;
+.dots {
+   right: 10px;
+	z-index: 1;
+	list-style: none;
+	padding: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
 }
 
-.section2 {
-	background-color: #BA5EBB; 
+.dots li a {
+	   padding: 10px;
+	width: 4px;
+	height: 10px;
+	display: block;
 }
 
-.section3 {
-	background-color:  #736ABB;
+.dots li a:before {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background: rgba(255, 255, 255, 0.48);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
-.section4 {
-	background-color:  #C5C384;
-}
-
-.section5 {
-	background-color:  #C59684;
+.dots li a.selected:before {
+	background-color: #FFFFFF;
+ 	width: 18px;
+	height: 18px;
+	margin-top: -4px;
+	left: 7px; 
 }

@@ -3,18 +3,45 @@
 <head>
 	<title>Full page scroll without Jquery</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheet/full-page-scroll.css">
-	
+	<style type="text/css">
+		.section1 {
+			background-color: #3D97A0;
+		}
 
+		.section2 {
+			background-color: #BA5EBB; 
+		}
+
+		.section3 {
+			background-color:  #736ABB;
+		}
+
+		.section4 {
+			background-color:  #C5C384;
+		}
+
+		.section5 {
+			background-color:  #C59684;
+		}
+	</style>
 </head>
 <body>
-	<div id="main" class="scroll-wrapper">
+
+		<ul class="dots">
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a class="selected" href="#"></a></li>
+		</ul>
+	
+	<div id="main" class="scroll-container">
 		<section class="section1"></section>
 		<section class="section2"></section>
 		<section class="section3"></section>
 		<section class="section4"></section>
 		<section class="section5"></section>
 	</div>
-
 	<script src="assets/javascript/full-page-scroll.js"></script>
 	<script type="text/javascript">
 		new fullScroll();
