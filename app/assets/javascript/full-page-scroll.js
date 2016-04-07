@@ -103,15 +103,21 @@
 	fullScroll.prototype.addEvents = function () {
 		var _self = this;
 		
-		function mousewheel(event){
+		function mousewheel (event){
 			var direction = event.deltaY > 0 ? 1 : 0;
  			_self.moveScroll(1, direction, null);			
+		}
+
+		function keyup (event) {
+			var direction = event.keyCode == 40 ? 1 : event.keyCode == 38 ? 0 : null;
 		}
 		
 		if (document.addEventListener) {
 			document.addEventListener('mousewheel', mousewheel);
+			document.addEventListener('keyup', keyup);
 		} else {
 			document.attachEvent('mousewheel', mousewheel);
+			document.attachEvent('keyup', keyup);
 		}
 		return this;
 	};
