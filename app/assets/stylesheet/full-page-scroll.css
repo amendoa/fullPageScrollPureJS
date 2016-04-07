@@ -20,12 +20,13 @@ body, html {
 }
 
 .dots {
-   right: 10px;
+	right: 10px;
 	z-index: 1;
 	list-style: none;
 	padding: 0;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	position: absolute;
@@ -33,7 +34,7 @@ body, html {
 }
 
 .dots li a {
-	   padding: 10px;
+	padding: 10px;
 	width: 4px;
 	height: 10px;
 	display: block;
@@ -45,15 +46,28 @@ body, html {
 	width: 12px;
 	height: 12px;
 	background: rgba(255, 255, 255, 0.48);
-	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;	
+	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	-moz-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	-ms-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	-o-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .dots li a.active:before {
 	background-color: #FFFFFF;
- 	width: 18px;
+	width: 18px;
 	height: 18px;
 	margin-top: -4px;
 	left: 7px; 
+	background-color: white;
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.2);
 }
