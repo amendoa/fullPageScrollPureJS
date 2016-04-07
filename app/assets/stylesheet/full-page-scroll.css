@@ -6,7 +6,7 @@ body, html {
     overflow: hidden;
 }
 
-.scroll-wrapper{
+.scroll-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
@@ -14,7 +14,7 @@ body, html {
     padding: 0;
 }
 
-.scroll-wrapper section{
+.scroll-wrapper section {
     width: 100%;
     height: 100%;
 }

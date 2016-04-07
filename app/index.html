@@ -3,9 +3,11 @@
 <head>
 	<title>Full page scroll without Jquery</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheet/full-page-scroll.css">
+	
+
 </head>
 <body>
-	<div class="scroll-wrapper">
+	<div id="main" class="scroll-wrapper">
 		<section class="section1"></section>
 		<section class="section2"></section>
 		<section class="section3"></section>
@@ -13,6 +15,9 @@
 		<section class="section5"></section>
 	</div>
 
-<script type="assets/javascript/full-page-scroll.js"></script>
+	<script src="assets/javascript/full-page-scroll.js"></script>
+	<script type="text/javascript">
+		new fullScroll();
+	</script>
 </body>
 </html>
