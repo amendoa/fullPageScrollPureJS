@@ -1,0 +1,22 @@
+{
+  "name": "fullpagescrollpurejs",
+  "version": "0.0.1",
+  "description": "Full page scroll without Jquery",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almeida-matheus/fullPageScrollPureJS.git"
+  },
+  "author": "Matheus Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almeida-matheus/fullPageScrollPureJS/issues"
+  },
+  "homepage": "https://github.com/almeida-matheus/fullPageScrollPureJS#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
