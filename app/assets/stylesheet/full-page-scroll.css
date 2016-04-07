@@ -50,7 +50,7 @@ body, html {
 	-moz-border-radius: 10px;
 }
 
-.dots li a.selected:before {
+.dots li a.active:before {
 	background-color: #FFFFFF;
  	width: 18px;
 	height: 18px;
