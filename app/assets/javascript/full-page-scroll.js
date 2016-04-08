@@ -105,38 +105,58 @@
 	 * @return {Object} this(fullScroll)
 	 */
 	fullScroll.prototype.addEvents = function () {
+		var mTouchStart = 0;
+		var mTouchEnd = 0;
 		var _self = this;
 		
-		function mousewheel (event){
+		function mouseWheel (event){
 			var direction = event.deltaY > 0 ? 1 : 0;
  			_self.moveScroll(1, direction, null);	
  			removeEvents();
 		}
 
-		function keyup (event) {
+		function keyUp (event) {
 			var direction = event.keyCode == 40 ? 1 : event.keyCode == 38 ? 0 : null;
 			_self.moveScroll(1, direction, null);
 		}
 
+		function touchStart (event) {
+			mTouchStart = parseInt(event.changedTouches[0].clientY);
+			mTouchEnd = 0;
+		}
+
+		function touchEnd (event) {
+			mTouchEnd = parseInt(event.changedTouches[0].clientY);
+			if (mTouchEnd - mTouchStart > 100 || mTouchStart - mTouchEnd > 100) {
+				var direction = mTouchEnd > mTouchStart ? 0 : 1;
+				_self.moveScroll(1, direction, null);
+			}
+			
+		}
+
 		if (document.addEventListener) {
-			document.addEventListener('mousewheel', mousewheel, false);
-			document.addEventListener('wheel', mousewheel, false);
-			document.addEventListener('keyup', keyup, false);
+			document.addEventListener('mousewheel', mouseWheel, false);
+			document.addEventListener('wheel', mouseWheel, false);
+			document.addEventListener('keyup', keyUp, false);
+			document.addEventListener('touchstart', touchStart, false);
+			document.addEventListener('touchend', touchEnd, false);
 
 		} else {
-			document.attachEvent('onmousewheel', mousewheel, false);
-			document.attachEvent('onkeyup', keyup, false);
+			document.attachEvent('onmousewheel', mouseWheel, false);
+			document.attachEvent('onkeyup', keyUp, false);
 		}
 
 		var removeEvents = function () {
 			if (document.addEventListener) {
-			document.removeEventListener('mousewheel', mousewheel, false);
-			document.removeEventListener('wheel', mousewheel, false);
-			document.removeEventListener('keyup', keyup, false);
+			document.removeEventListener('mousewheel', mouseWheel, false);
+			document.removeEventListener('wheel', mouseWheel, false);
+			document.removeEventListener('keyup', keyUp, false);
+			document.removeEventListener('touchstart', touchStart, false);
+			document.removeEventListener('touchend', touchEnd, false);
 
 			} else {
-				document.detachEvent('onmousewheel', mousewheel, false);
-				document.detachEvent('onkeyup', keyup, false);
+				document.detachEvent('onmousewheel', mouseWheel, false);
+				document.detachEvent('onkeyup', keyUp, false);
 			}
 
 			setTimeout(function(){
