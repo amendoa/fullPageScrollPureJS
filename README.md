@@ -8,7 +8,8 @@ http://almeida-matheus.github.io/fullPageScrollPureJS
 
 ### Usage
 
-Download last version [HERE](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.0/full-page-1.0.0.zip)
+Download last version :
+[fullpage.zip](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.0/full-page-1.0.0.zip) or [fullpage.tar.gz](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.0/full-page-1.0.0.tar.gz)
 
 #### Import Style and Javascript on your page
 ```html
