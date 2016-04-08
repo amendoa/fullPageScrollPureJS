@@ -35,8 +35,6 @@
 		    dotsPosition: params.dotsPosition || 'left'
 		};
 
-		console.log(params.displayDots);
-
 		this.defaults = defaults;
 		/**
 		 * Init build
@@ -113,6 +111,16 @@
 			document.addEventListener('touchstart', this.touchStart, false);
 			document.addEventListener('touchend', this.touchEnd, false);
 			window.addEventListener("hashchange", this.hashChange, false);
+
+			/**
+			 * Enable scroll if decive don't have touch support
+			 */
+			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				if(!('ontouchstart' in window)){
+					document.body.style = "overflow: scroll;";
+					document.documentElement.style = "overflow: scroll;";
+				}
+			}			
 
 		} else {
 			document.attachEvent('onmousewheel', this.mouseWheelAndKey, false);
@@ -217,7 +225,6 @@
 
 		this.changeCurrentPosition = function (position) {
 			if (position !== "") {
-				console.log(position);
 				_self.defaults.currentPosition = position;
 				location.hash = _self.defaults.currentPosition;
 			}	
