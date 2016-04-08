@@ -1,0 +1,45 @@
+.section1 {
+	background-color: #7DBCD4;
+}
+
+.section2 {
+	background-color: #98C19F; 
+}
+
+.section3 {
+	background-color:  #A199E2;
+}
+
+.section4 {
+	background-color:  #CC938E;
+}
+
+.section5 {
+	background-color:  #D2C598;
+}
+		
+section div {
+	font-family: 'Open Sans';
+	font-style: normal;
+	text-align: center;
+	position: relative;
+	top: 50%;  
+	transform: translateY(-50%);
+}
+
+span {
+	font-size: 4em;
+	font-style: normal;
+	color: #fff;
+}
+
+.button {
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
+	padding: 10px 40px;		  	
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+}

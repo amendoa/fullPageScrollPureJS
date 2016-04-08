@@ -23,13 +23,13 @@ body, html {
 	z-index: 1;
 	list-style: none;
 	padding: 0;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	position: absolute;
-	top: 50%;
+	position: absolute;	
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .dots li a {
@@ -54,7 +54,7 @@ body, html {
 	-moz-transition: -moz-transform 0.3s ease, background-color 0.3s ease;
 	-ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
 	-o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .dots li a.active:before {

@@ -19,5 +19,5 @@ gulp.task('dist', function() {
 	gulp.src('./app/assets/javascript/**/*.js')
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./dist/assets/javascript/'));	
+        .pipe(gulp.dest('./dist/javascript/'));	
 });

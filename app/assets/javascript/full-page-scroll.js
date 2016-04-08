@@ -26,13 +26,13 @@
 		 */
 		var defaults = {
 			container : main,
-		    sections : sections,
-		    animateTime : params.animateTime || 0.7,
-		    animateFunction : params.animateFunction || 'ease',
-		    maxPosition: sections.length - 1,
-		    currentPosition: 0,
-		    displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
-		    dotsPosition: params.dotsPosition || 'left'
+			sections : sections,
+			animateTime : params.animateTime || 0.7,
+			animateFunction : params.animateFunction || 'ease',
+			maxPosition: sections.length - 1,
+			currentPosition: 0,
+			displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
+			dotsPosition: params.dotsPosition || 'left'
 		};
 
 		this.defaults = defaults;
@@ -72,8 +72,7 @@
 	 * Build dots navigation
 	 * @return {Object} this (fullScroll)
 	 */
-	fullScroll.prototype.buildDots = function () {
-		
+	fullScroll.prototype.buildDots = function () {		
 		this.ul = document.createElement('ul');
 		this.ul.classList.add('dots');
 		this.ul.classList.add(this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left');
@@ -148,7 +147,7 @@
 				_self.changeCurrentPosition(_self.defaults.currentPosition);	
 			}
 			_self.removeEvents();
- 		};
+		};
 
 		this.touchStart = function (event) {
 			mTouchStart = parseInt(event.changedTouches[0].clientY);
@@ -203,24 +202,24 @@
 
 		this.animateScroll = function () {
 			var animateTime = this.defaults.animateTime;
-	        var animateFunction = this.defaults.animateFunction;
-	        var position = this.defaults.currentPosition * 100;
+			var animateFunction = this.defaults.animateFunction;
+			var position = this.defaults.currentPosition * 100;
 
-		    this.defaults.container.style.webkitTransform = 'translateY(-' + position + '%)';
-		    this.defaults.container.style.mozTransform = 'translateY(-' + position + '%)';
-		    this.defaults.container.style.msTransform = 'translateY(-' + position + '%)';
-		    this.defaults.container.style.transform = 'translateY(-' + position + '%)';
-		    this.defaults.container.style.webkitTransition = 'all ' + animateTime + 's ' + animateFunction;
-		    this.defaults.container.style.mozTransition = 'all ' + animateTime + 's ' + animateFunction;
-		    this.defaults.container.style.msTransition = 'all ' + animateTime + 's ' + animateFunction;
-		    this.defaults.container.style.transition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.webkitTransform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.mozTransform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.msTransform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.transform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.webkitTransition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.mozTransition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.msTransition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.transition = 'all ' + animateTime + 's ' + animateFunction;
 
-		    for (var i = 0; i < this.ul.childNodes.length; i++) {
+			for (var i = 0; i < this.ul.childNodes.length; i++) {
 					this.ul.childNodes[i].firstChild.classList.remove('active');
 					if (i == this.defaults.currentPosition) {
 					this.ul.childNodes[i].firstChild.classList.add('active');		
 				}
-	 		}
+			}
 		};
 
 		this.changeCurrentPosition = function (position) {
@@ -232,6 +231,5 @@
 
 		return this;
 	};
-
 	window.fullScroll = fullScroll;
 })();
