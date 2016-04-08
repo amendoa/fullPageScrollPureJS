@@ -4,7 +4,8 @@
 var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+	cssmin = require('gulp-cssmin');
 
 gulp.task('server', function() {
 	browserSync.init(['app/index.html', 'app/assets/stylesheet/**/*.css', 'app/assets/javascript/**/*.js'], {
@@ -20,4 +21,9 @@ gulp.task('dist', function() {
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./dist/javascript/'));	
+
+	gulp.src('./app/assets/stylesheet/full-page-scroll.css')
+		.pipe(cssmin())
+		.pipe(rename({suffix: '.min'}))
+		.pipe(gulp.dest('./dist/stylesheet/'));
 });
