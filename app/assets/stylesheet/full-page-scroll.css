@@ -19,8 +19,7 @@ body, html {
 	height: 100%;
 }
 
-.dots {
-	right: 10px;
+.dots {	
 	z-index: 1;
 	list-style: none;
 	padding: 0;
@@ -71,4 +70,12 @@ body, html {
 	-ms-transform: scale(1.0);
 	-o-transform: scale(1.0);
 	transform: scale(1.0);
+}
+
+.dots-right {
+	left: 25px;
+}
+
+.dots-left {
+	right: 10px;
 }

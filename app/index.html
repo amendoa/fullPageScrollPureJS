@@ -5,23 +5,23 @@
 	<link rel="stylesheet" type="text/css" href="assets/stylesheet/full-page-scroll.css">
 	<style type="text/css">
 		.section1 {
-			background-color: #3D97A0;
+			background-color: #7DBCD4;
 		}
 
 		.section2 {
-			background-color: #BA5EBB; 
+			background-color: #98C19F; 
 		}
 
 		.section3 {
-			background-color:  #736ABB;
+			background-color:  #A199E2;
 		}
 
 		.section4 {
-			background-color:  #C5C384;
+			background-color:  #CC938E;
 		}
 
 		.section5 {
-			background-color:  #C59684;
+			background-color:  #D2C598;
 		}
 	</style>
 </head>
@@ -35,7 +35,12 @@
 	</div>
 	<script src="assets/javascript/full-page-scroll.js"></script>
 	<script type="text/javascript">
-		new fullScroll();
+		new fullScroll({
+			displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 0.7,
+			animateFunction: 'ease'
+		});
 	</script>
 </body>
 </html>
