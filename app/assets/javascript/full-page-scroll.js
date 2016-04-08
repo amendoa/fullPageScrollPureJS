@@ -25,7 +25,7 @@
 		var defaults = {
 			container : main,
 		    sections : sections,
-		    animateTime : 0.6,
+		    animateTime : 0.9,
 		    animateType : 'ease',
 		    maxPosition: sections.length - 1
 		};
@@ -80,7 +80,11 @@
 			var li = document.createElement('li');
 			var a = document.createElement('a');
 			
-			a.addEventListener('click', dotsClick);
+			if (a.addEventListener) {
+				a.addEventListener('click', dotsClick);
+			} else {
+				a.attachEvent('click', dotsClick);
+			}
 			
 			a.setAttribute('href', '#');
 			a.setAttribute('data-index', i);
@@ -105,21 +109,40 @@
 		
 		function mousewheel (event){
 			var direction = event.deltaY > 0 ? 1 : 0;
- 			_self.moveScroll(1, direction, null);			
+ 			_self.moveScroll(1, direction, null);	
+ 			removeEvents();
 		}
 
 		function keyup (event) {
 			var direction = event.keyCode == 40 ? 1 : event.keyCode == 38 ? 0 : null;
 			_self.moveScroll(1, direction, null);
 		}
-		
+
 		if (document.addEventListener) {
-			document.addEventListener('mousewheel', mousewheel);
-			document.addEventListener('keyup', keyup);
+			document.addEventListener('mousewheel', mousewheel, false);
+			document.addEventListener('wheel', mousewheel, false);
+			document.addEventListener('keyup', keyup, false);
+
 		} else {
-			document.attachEvent('mousewheel', mousewheel);
-			document.attachEvent('keyup', keyup);
+			document.attachEvent('onmousewheel', mousewheel, false);
+			document.attachEvent('onkeyup', keyup, false);
 		}
+
+		var removeEvents = function () {
+			if (document.addEventListener) {
+			document.removeEventListener('mousewheel', mousewheel, false);
+			document.removeEventListener('wheel', mousewheel, false);
+			document.removeEventListener('keyup', keyup, false);
+
+			} else {
+				document.detachEvent('onmousewheel', mousewheel, false);
+				document.detachEvent('onkeyup', keyup, false);
+			}
+
+			setTimeout(function(){
+				_self.addEvents();
+			}, 600);
+		};
 		return this;
 	};
 

@@ -52,22 +52,23 @@ body, html {
 	-o-border-radius: 10px;
 	border-radius: 10px;	
 	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
-	-moz-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
-	-ms-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
-	-o-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
-	transition: transform 0.3s ease, background-color 0.3s ease;
+	-moz-transition: -moz-transform 0.3s ease, background-color 0.3s ease;
+	-ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
+	-o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .dots li a.active:before {
+	content: '';
 	background-color: #FFFFFF;
 	width: 18px;
 	height: 18px;
 	margin-top: -4px;
 	left: 7px; 
 	background-color: white;
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	transform: scale(1.2);
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
 }
