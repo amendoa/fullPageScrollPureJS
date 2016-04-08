@@ -1,6 +1,5 @@
 'use strict';
 
-//Plugins
 var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	uglify = require('gulp-uglify'),
