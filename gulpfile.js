@@ -21,7 +21,7 @@ gulp.task('dist', function() {
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./dist/javascript/'));	
 
-	gulp.src('./app/assets/stylesheet/full-page-scroll.css')
+	gulp.src('./app/assets/stylesheet/**/*.css')
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('./dist/stylesheet/'));
