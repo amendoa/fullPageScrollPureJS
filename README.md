@@ -54,6 +54,7 @@ Download last version :
 		<script src="//javascript/full-page-scroll.min.js"></script>
 		<script type="text/javascript">
 			new fullScroll({
+				mainElement: 'main',
 				displayDots: true,
 				dotsPosition: 'left',
 				animateTime: 0.7,
