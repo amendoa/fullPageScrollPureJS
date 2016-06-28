@@ -1,4 +1,4 @@
-# It works in ie9+ (ie9 dont have support to CSS3 transition :(, but it works without effects)
+# It works in ie9+ (ie9 doesn't have support to CSS3 transition :(, but it works without effects)
 # Full page scroll without Jquery
 
 
