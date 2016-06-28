@@ -1,10 +1,4 @@
-# HAS BUGS IN IE, I'M WORKING FOR RESOLVE
-# HAS BUGS IN IE, I'M WORKING FOR RESOLVE
-# HAS BUGS IN IE, I'M WORKING FOR RESOLVE
-# HAS BUGS IN IE, I'M WORKING FOR RESOLVE
-# HAS BUGS IN IE, I'M WORKING FOR RESOLVE
-# HAS BUGS IN IE, I'M WORKING FOR RESOLVE
-
+# It works in ie9+ (ie9 dont have support to CSS3 transition :(, but it works without effects)
 # Full page scroll without Jquery
 
 

@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	cssmin = require('gulp-cssmin');
 
-gulp.task('server', function() {
+gulp.task('default', function() {
 	browserSync.init(['app/index.html', 'app/assets/stylesheet/**/*.css', 'app/assets/javascript/**/*.js'], {
 		open: 'external',
 		server: {
@@ -15,7 +15,7 @@ gulp.task('server', function() {
 	});
 });
 
-gulp.task('dist', function() {	
+gulp.task('build', function() {	
 	gulp.src('./app/assets/javascript/**/*.js')
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))

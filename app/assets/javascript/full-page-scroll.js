@@ -12,10 +12,10 @@
 		 * Main div
 		 * @type {Object}
 		 */
-		var main = document.getElementById('main');
+		var main = document.getElementById(params.mainElement);
 		
 		/**
-		 * Sections div
+		 * Sections divclass
 		 * @type {Array}
 		 */
 		var sections = main.getElementsByTagName('section');
@@ -46,14 +46,15 @@
 	 * Init plugin
 	 */
 	fullScroll.prototype.init = function () {
-		this.buildSections()
+		this.buildPublicFunctions()
+			.buildSections()
 			.buildDots()
-			.buildPublicFunctions()
 			.addEvents();
 
 		var anchor = location.hash.replace('#', '').split('/')[0];
 		location.hash = 0;
 		this.changeCurrentPosition(anchor);
+		this.registerIeTags();
 	};
 
 	/**
@@ -74,8 +75,10 @@
 	 */
 	fullScroll.prototype.buildDots = function () {		
 		this.ul = document.createElement('ul');
-		this.ul.classList.add('dots');
-		this.ul.classList.add(this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left');
+		
+		this.ul.className = this.updateClass(1, 'dots', this.ul.className);
+		this.ul.className = this.updateClass(1, this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left', this.ul.className);
+
 		var _self = this;
 		var sections = this.defaults.sections;		
 
@@ -88,7 +91,7 @@
 			_self.ul.appendChild(li);
 		}
 
-		this.ul.childNodes[0].firstChild.classList.add('active');
+		this.ul.childNodes[0].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[0].firstChild.className);
 
 		if (this.defaults.displayDots) {
 			document.body.appendChild(this.ul);
@@ -215,9 +218,9 @@
 			this.defaults.container.style.transition = 'all ' + animateTime + 's ' + animateFunction;
 
 			for (var i = 0; i < this.ul.childNodes.length; i++) {
-					this.ul.childNodes[i].firstChild.classList.remove('active');
+					this.ul.childNodes[i].firstChild.className = this.updateClass(2, 'active', this.ul.childNodes[i].firstChild.className);
 					if (i == this.defaults.currentPosition) {
-					this.ul.childNodes[i].firstChild.classList.add('active');		
+					this.ul.childNodes[i].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[i].firstChild.className);
 				}
 			}
 		};
@@ -226,7 +229,19 @@
 			if (position !== "") {
 				_self.defaults.currentPosition = position;
 				location.hash = _self.defaults.currentPosition;
-			}	
+			}
+		};
+
+		this.registerIeTags = function () {
+			document.createElement('section'); 
+		};
+
+		this.updateClass = function (type, newClass, currentClass) {
+			if (type == 1) {
+				return currentClass += ' ' + newClass;
+			} else if (type == 2) {
+				return currentClass.replace(newClass, '');
+			}
 		};
 
 		return this;
