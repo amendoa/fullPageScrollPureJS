@@ -3,14 +3,14 @@
 
 
 ### Last Version
-1.0.0
+1.0.1
 ### Demonstration
 http://almeida-matheus.github.io/fullPageScrollPureJS
 
 ### Usage
 
 Download last version :
-[fullpage.zip](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.0/full-page-1.0.0.zip) or [fullpage.tar.gz](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.0/full-page-1.0.0.tar.gz)
+[fullpage.zip](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.1/full-page-1.0.1.zip) or [fullpage.tar.gz](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.1/full-page-1.0.1.tar.gz)
 
 #### Import Style and Javascript on your page
 ```html
