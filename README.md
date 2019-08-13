@@ -2,7 +2,7 @@
 1.0.1
 
 ### Demo
-http://almeida-matheus.github.io/fullPageScrollPureJS
+https://amendoa.github.io/fullPageScrollPureJS
 
 ### Usage
 
