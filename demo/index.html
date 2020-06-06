@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Full page scroll</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://rawgit.com/almeida-matheus/fullPageScrollPureJS/master/app/assets/stylesheet/full-page-scroll.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      .section1 {
+        background-color: #7dbcd4;
+      }
+
+      .section2 {
+        background-color: #98c19f;
+      }
+
+      .section3 {
+        background-color: #a199e2;
+      }
+
+      .section4 {
+        background-color: #cc938e;
+      }
+
+      .section5 {
+        background-color: #d2c598;
+      }
+
+      section div {
+        font-family: "Open Sans";
+        font-style: normal;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      span {
+        font-size: 4em;
+        font-style: normal;
+        color: #fff;
+      }
+
+      .button {
+        background-color: #f2cf66;
+        border-bottom: 5px solid #d1b358;
+        text-shadow: 0px -2px #d1b358;
+        padding: 10px 40px;
+        border-radius: 10px;
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/almeida-matheus/fullPageScrollPureJS">
+      <img
+        style="position: fixed; z-index: 99; top: 0; right: 0; border: 0;"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+        alt="Fork me on GitHub"
+      />
+    </a>
+    <div id="main" class="scroll-container">
+      <section class="section1">
+        <div>
+          <span> It's beautiful and don't need Jquery :D </span>
+        </div>
+        <div>
+          <a
+            href="https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.1/full-page-1.0.1.zip"
+            class="button"
+          >
+            Download here
+          </a>
+        </div>
+      </section>
+      <section class="section2">
+        <div>
+          <span> Working on Tablets and Phones </span>
+        </div>
+      </section>
+      <section class="section3">
+        <div>
+          <span> Anuncie aqui </span>
+        </div>
+      </section>
+      <section class="section4">
+        <div>
+          <span> Funciona até no IE ^^ (IE 9 +)! </span>
+        </div>
+      </section>
+      <section class="section5">
+        <div>
+          <span> Edivaldo Pericleiton Rasta </span>
+        </div>
+      </section>
+    </div>
+    <script src="https://rawgit.com/almeida-matheus/fullPageScrollPureJS/master/app/assets/javascript/full-page-scroll.js"></script>
+    <script type="text/javascript">
+      new fullScroll({
+        mainElement: "main",
+        displayDots: true,
+        dotsPosition: "right",
+        animateTime: 0.7,
+        animateFunction: "ease",
+      });
+    </script>
+  </body>
+</html>
