@@ -86,4 +86,12 @@ Download last version :
 | animateTime     | time to complete scroll animation | 0.7     |
 | animateFunction | css transition function           | "ease"  |
 
+### Commands
+
+| Name         | Desc                     |
+| ------------ | ------------------------ |
+| yarn install | install dependencies     |
+| gulp         | start development server |
+| gulp build   | create production build  |
+
 Made with :heart:
