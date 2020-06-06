@@ -1,4 +1,4 @@
-# Fullpage Scrolling With Vanilla JavaScript
+# Fullpage Scrolling with Vanilla JavaScript
 
 ### Demo :earth_americas:
 
@@ -7,7 +7,7 @@ https://fullpagescrollpurejs.surge.sh/
 ### Usage :wrench:
 
 Download last version :
-[fullpage.zip](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.1/full-page-1.0.1.zip) or [fullpage.tar.gz](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.1/full-page-1.0.1.tar.gz)
+[fullpage.zip](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.2/full-page-1.0.2.zip) or [fullpage.tar.gz](https://github.com/almeida-matheus/fullPageScrollPureJS/releases/download/1.0.2/full-page-1.0.2.tar.xz)
 
 #### Import css and javascript on your main html file
 
