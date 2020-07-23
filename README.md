@@ -34,8 +34,7 @@ Download last version :
 
 ```html
 <script type="text/javascript">
-  new fullScroll({
-    mainElement: "main",
+  new fullScroll('#main', {
     displayDots: true,
     dotsPosition: "left",
     animateTime: 0.7,
