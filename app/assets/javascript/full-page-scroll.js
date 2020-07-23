@@ -7,12 +7,12 @@
 	/**
 	 * Full scroll main function
 	 */
-	var fullScroll = function (params) {
+	var fullScroll = function (containerSelector, params) {
 		/**
 		 * Main div
 		 * @type {Object}
 		 */
-		var main = document.getElementById(params.mainElement);
+		var main = document.querySelector(containerSelector);
 		
 		/**
 		 * Sections divclass
