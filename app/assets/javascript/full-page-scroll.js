@@ -52,7 +52,23 @@
 			.addEvents();
 
 		var anchor = location.hash.replace('#', '').split('/')[0];
-		location.hash = 0;
+		
+		if (anchor) {
+		    if (anchor < 0 || anchor > this.defaults.maxPosition) {
+			location.hash = 0;
+			this.defaults.currentPosition = 0;
+                    }
+		    else {
+			this.defaults.currentPosition = anchor;
+			location.hash = anchor;
+			this.animateScroll();
+		    }
+		}
+		else {
+		    location.hash = 0;
+		    this.defaults.currentPosition = 0;
+		}
+
 		this.changeCurrentPosition(anchor);
 		this.registerIeTags();
 	};
