@@ -34,8 +34,7 @@ Download last version :
 
 ```html
 <script type="text/javascript">
-  new fullScroll({
-    mainElement: "main",
+  new fullScroll('#main', {
     displayDots: true,
     dotsPosition: "left",
     animateTime: 0.7,
@@ -64,8 +63,7 @@ Download last version :
     </div>
     <script src="//javascript/full-page-scroll.min.js"></script>
     <script type="text/javascript">
-      new fullScroll({
-        mainElement: "main",
+      new fullScroll('#main', {
         displayDots: true,
         dotsPosition: "left",
         animateTime: 0.7,
@@ -80,7 +78,6 @@ Download last version :
 
 | Name            | Desc                              | Example |
 | --------------- | --------------------------------- | ------- |
-| mainElement     | container id                      | main    |
 | displayDots     | display dots navigation           | true    |
 | dotsPosition    | dots navigation position          | "right" |
 | animateTime     | time to complete scroll animation | 0.7     |
