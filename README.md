@@ -24,9 +24,9 @@ Download last version :
 
 ```html
 <div id="main" class="scroll-container">
-  <section>Section 1</section>
-  <section>Section 2</section>
-  <section>Section 3</section>
+  <section data-index="section-1">Section 1</section>
+  <section data-index="section-2">Section 2</section>
+  <section data-index="section-3">Section 3</section>
 </div>
 ```
 
@@ -58,9 +58,15 @@ Download last version :
   </head>
   <body>
     <div id="main" class="scroll-container">
-      <section style="background-color:#DCADAD">Section 1</section>
-      <section style="background-color:#555594">Section 2</section>
-      <section style="background-color:#5992AD">Section 3</section>
+      <section style="background-color:#DCADAD" data-index="section-1">
+        Section 1
+      </section>
+      <section style="background-color:#555594" data-index="section-2">
+        Section 2
+      </section>
+      <section style="background-color:#5992AD" data-index="section-3">
+        Section 3
+      </section>
     </div>
     <script src="//javascript/full-page-scroll.min.js"></script>
     <script type="text/javascript">

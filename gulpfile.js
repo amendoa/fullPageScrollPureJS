@@ -2,7 +2,7 @@
 
 var gulp = require("gulp"),
   browserSync = require("browser-sync"),
-  uglify = require("gulp-uglify"),
+  terser = require("gulp-terser"),
   rename = require("gulp-rename"),
   cssmin = require("gulp-cssmin");
 
@@ -22,10 +22,10 @@ gulp.task("default", function () {
   );
 });
 
-gulp.task("build", function () {
+gulp.task("build", function (resolve) {
   gulp
     .src("./app/assets/javascript/**/*.js")
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("./dist/javascript/"));
 
@@ -34,4 +34,5 @@ gulp.task("build", function () {
     .pipe(cssmin())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("./dist/stylesheet/"));
+  resolve();
 });
