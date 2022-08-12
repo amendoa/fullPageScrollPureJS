@@ -1,4 +1,12 @@
-# Fullpage Scrolling with Vanilla JavaScript
+
+
+ 🚧 🚧 🚧
+# This project is no longer supported, please consider using https://github.com/alvarotrigo/fullPage.js/#fullpagejs instead.
+
+
+
+
+# Fullpage Scrolling with Vanilla JavaScript *DEPRECATED*
 
 ### Demo :earth_americas:
 
